@@ -1,5 +1,3 @@
-#hola
-
 
 # Dado un array de números imprime únicamente los elementos que contienen un indice impar
 # Utiliza: Enumerable#each_with_index
@@ -13,16 +11,17 @@
  # end
 
 
-# Dado un array de números regresa un array con solo los numeros impares
-# Utiliza: Enumerable#select
-def odd_integers(array)
-  array.select { |num| num.odd? }
-end
-
-# # Dado un array y un límite regresa el primer numero que sea menor al límite 
-# # Utiliza: Enumerable#find
-# def first_under(array, limit)
+# # Dado un array de números regresa un array con solo los numeros impares
+# # Utiliza: Enumerable#select
+# def odd_integers(array)
+#   array.select { |num| num.odd? }
 # end
+
+# Dado un array y un límite regresa el primer numero que sea menor al límite 
+# Utiliza: Enumerable#find
+def first_under(array, limit)
+		array.find { |num, max| num < limit }
+end
 
 
 # # Dado un array de strings y regresa un nuevo array donde todos los elementos contengan al final un signo de admiración. 
@@ -48,9 +47,9 @@ end
 # => 8
 # => 12
 
-puts odd_integers([3, 4, 7, 9, 10, 16]) == [3, 7, 9]
+# puts odd_integers([3, 4, 7, 9, 10, 16]) == [3, 7, 9]
 
-# puts first_under([13, 21, 7, 0, 11, 106], 10) == 7
+puts first_under([13, 21, 7, 0, 11, 106], 10) == 7
 
 # puts add_bang(["hi", "mom"]) == ["hi!", "mom!"]
 
