@@ -26,17 +26,21 @@
 
 # # Dado un array de strings y regresa un nuevo array donde todos los elementos contengan al final un signo de admiración. 
 # # Utiliza: Enumerable#map
- def add_bang(array)
-   array.map { |n| n + "!" }
+ # def add_bang(array)
+ #   array.map { |n| n + "!" }
 
- end
+ # end
 
 # # Dado un array de números calcula la suma de todos sus elementos. 
 # # Utiliza: Enumerable#reduce
 # # Repite el ejercicio con Enumerable#inject
-# def sum(array)
-# end
+ # def sum(array)
+ # 	array.reduce(:+)
+ # end
 
+# def sum(array)
+#  	array.inject { |sum, n| sum + n }
+# end
 
 # # Dado un array de string reorganizalo en grupos de tres y ordénalos alfabéticamente.  
 # # Utiliza: Enumerable#each_slice
@@ -53,7 +57,7 @@
 
 #puts first_under([13, 21, 7, 0, 11, 106], 10) == 7
 
- puts add_bang(["hi", "mom"]) == ["hi!", "mom!"]
+# puts add_bang(["hi", "mom"]) == ["hi!", "mom!"]
 
 # puts sum([1, 1, 2, 3, 5]) == 12
 
