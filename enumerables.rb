@@ -19,15 +19,17 @@
 
 # Dado un array y un límite regresa el primer numero que sea menor al límite 
 # Utiliza: Enumerable#find
-def first_under(array, limit)
-		array.find { |num, max| num < limit }
-end
+# def first_under(array, limit)
+# 		array.find { |num, max| num < limit }
+# end
 
 
 # # Dado un array de strings y regresa un nuevo array donde todos los elementos contengan al final un signo de admiración. 
 # # Utiliza: Enumerable#map
-# def add_bang(array)
-# end
+ def add_bang(array)
+   array.map { |n| n + "!" }
+
+ end
 
 # # Dado un array de números calcula la suma de todos sus elementos. 
 # # Utiliza: Enumerable#reduce
@@ -49,9 +51,9 @@ end
 
 # puts odd_integers([3, 4, 7, 9, 10, 16]) == [3, 7, 9]
 
-puts first_under([13, 21, 7, 0, 11, 106], 10) == 7
+#puts first_under([13, 21, 7, 0, 11, 106], 10) == 7
 
-# puts add_bang(["hi", "mom"]) == ["hi!", "mom!"]
+ puts add_bang(["hi", "mom"]) == ["hi!", "mom!"]
 
 # puts sum([1, 1, 2, 3, 5]) == 12
 
